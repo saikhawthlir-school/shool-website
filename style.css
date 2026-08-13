@@ -43,7 +43,18 @@ nav{
   z-index:1001;
 }
 .hamburger{display:none}
-.close-btn{display:none;position:absolute;left:20px;top:18px}
+.close-btn{
+  display:none;
+  position:static; /* ABSOLUTE PAIH - HMUN 1 AH AWM TIR NAN */
+  order:2; /* ☰ AWMNA BIAK */
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+  background:none;
+  border:none;
+  padding:0;
+  margin-right:5px; /* INKAR HNIMHNAN */
+}
 
 /* MOBILE MENU */
 .mobile-menu{
