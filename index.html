@@ -3,57 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saikhawthlir High School | Home</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>Saikhawthlir Sec School (RMSA)</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif}
-  :root{
-    --primary:#1E3A8A; /* Dark Blue */
-    --accent:#FBBF24; /* Yellow */
-    --bg:#F8FAFC;
-  }
-  html{scroll-behavior:smooth}
-  body{background:var(--bg)}
-
-  /* NAVBAR PC */
-  header{background:white;box-shadow:0 2px 15px rgba(0,0,0,0.1);position:sticky;top:0;z-index:999}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+  :root{--primary:#0A2647;--accent:#F5C542;--light:#F8FAFC}
+  body{background:var(--light)}
+  
+  /* NAVBAR HORIZONTAL */
+  header{background:var(--primary);color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.2)}
   nav{max-width:1200px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-  .logo{font-size:24px;font-weight:800;color:var(--primary)}
-  .logo span{color:var(--accent)}
-  .nav-links{display:flex;gap:30px}
-  .nav-links a{color:#333;text-decoration:none;font-weight:600;transition:0.3s}
-  .nav-links a:hover{color:var(--primary)}
-  .hamburger{display:none;font-size:28px;cursor:pointer;color:var(--primary)}
+  .logo{font-size:20px;font-weight:700}
+  .logo span{color:var(--accent);font-size:14px;display:block}
+  .nav-links{display:flex;gap:25px}
+  .nav-links a{color:white;text-decoration:none;font-weight:600;transition:0.3s;padding:8px 0}
+  .nav-links a:hover{color:var(--accent);border-bottom:2px solid var(--accent)}
+  .hamburger{display:none;font-size:28px;cursor:pointer}
   .mobile-menu{display:none}
-
-  /* HERO */
-  .hero{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:80px 20px;gap:40px}
-  .hero-text h1{font-size:52px;color:var(--primary);line-height:1.2}
-  .hero-text p{font-size:18px;margin:20px 0;color:#555}
-  .hero-img img{width:450px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
-  .btn-primary{background:var(--primary);color:white;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:700;transition:0.3s}
-  .btn-primary:hover{background:#152A6A}
-
-  /* SECTIONS */
-  section{padding:80px 20px;max-width:1200px;margin:0 auto}
-  .title{text-align:center;font-size:36px;color:var(--primary);margin-bottom:50px;font-weight:800}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-  .card{background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);transition:0.3s}
-  .card:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(0,0,0,0.12)}
-
-  footer{background:var(--primary);color:white;text-align:center;padding:40px 20px}
-
-  /* MOBILE VIEW */
+  
+  .container{max-width:1200px;margin:0 auto;padding:60px 20px}
+  .hero{text-align:center;margin-bottom:50px}
+  .hero h1{font-size:40px;color:var(--primary);margin-bottom:10px}
+  .hero p{color:#555;font-size:18px}
+  
+  .card{background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);margin-bottom:30px}
+  .card h2{color:var(--primary);margin-bottom:15px;border-left:4px solid var(--accent);padding-left:12px}
+  
+  footer{background:var(--primary);color:white;text-align:center;padding:30px;margin-top:50px}
+  
+  /* MOBILE */
   @media(max-width:900px){
     .nav-links{display:none}
     .hamburger{display:block}
-    .mobile-menu{display:none;flex-direction:column;background:white;padding:20px;gap:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+    .mobile-menu{display:none;flex-direction:column;background:var(--primary);padding:15px;gap:12px}
     .mobile-menu.active{display:flex}
-    .hero{flex-direction:column;text-align:center;padding:50px 20px}
-    .hero-text h1{font-size:36px}
-    .hero-img img{width:100%;max-width:400px}
-    .grid{grid-template-columns:1fr}
-    .title{font-size:28px}
+    .hero h1{font-size:28px}
   }
 </style>
 </head>
@@ -61,60 +45,52 @@
 
 <header>
   <nav>
-    <div class="logo">SHS<span>.</span></div>
+    <div class="logo">Saikhawthlir Sec School <span>RMSA</span></div>
     <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#facilities">Facilities</a>
-      <a href="#contact">Contact</a>
-      <a href="login.html" style="background:var(--accent);padding:8px 18px;border-radius:8px">Login</a>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="download.html">Download</a>
+      <a href="teachers.html">Teacher List</a>
+      <a href="contact.html">Contact Us</a>
     </div>
     <div class="hamburger" onclick="document.getElementById('mMenu').classList.toggle('active')">☰</div>
   </nav>
   <div class="mobile-menu" id="mMenu">
-    <a href="#home">Home</a><a href="#about">About</a><a href="#facilities">Facilities</a><a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="download.html">Download</a>
+    <a href="teachers.html">Teacher List</a>
+    <a href="contact.html">Contact Us</a>
   </div>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-text">
-    <h1>Shaping Future <br> Leaders of Tomorrow</h1>
-    <p>Saikhawthlir High School ah hian zirna tha ber leh nun tha kan ngaih pawimawh ber ani.</p>
-    <a href="#about" class="btn-primary">Explore More</a>
+<div class="container">
+  <div class="hero">
+    <h1>Welcome to Saikhawthlir Sec School</h1>
+    <p>RMSA - Education for Excellence</p>
   </div>
-  <div class="hero-img">
-    <img src="https://images.unsplash.com/photo-1588075592446-265f3e3e4804?q=80&w=800" alt="School">
-  </div>
-</section>
 
-<section id="about">
-  <h2 class="title">Why Choose Us?</h2>
-  <div class="grid">
-    <div class="card"><h3>🎓 Quality Education</h3><p>Zirtirtu thiam tak leh syllabus tha kan nei</p></div>
-    <div class="card"><h3>🏆 Sports & Activities</h3><p>Infiamna leh extracurricular kan ngai pawimawh</p></div>
-    <div class="card"><h3>💻 Smart Classes</h3><p>Technology hmang a zirna changtlung</p></div>
+  <div class="card">
+    <h2>Headmaster's Message</h2>
+    <p><b>Pu __________</b></p>
+    <p style="margin-top:15px;line-height:1.8">
+      Kan School ah hian naupang te hmakhaw ngaiin zirna tha ber kan pe a, 
+      nun tha leh character tha kan enkawl bawk ani. RMSA hnuaiah hian 
+      hmasawnna tam tak kan nei tawh a, in thawhpui na kan ngai hlu hle.
+      <br><br>
+      Kan website ah hian hriat tur pawimawh te kan dah thin. Min lo tlawh zing rawh u.
+    </p>
   </div>
-</section>
 
-<section id="facilities" style="background:white">
-  <h2 class="title">Our Facilities</h2>
-  <div class="grid">
-    <div class="card"><h3>Computer Lab</h3></div>
-    <div class="card"><h3>Science Lab</h3></div>
-    <div class="card"><h3>Library</h3></div>
+  <div class="card">
+    <h2>About Our School</h2>
+    <p>Saikhawthlir Sec School hi RMSA hnuaia awm, class 9 atanga 10 thleng zirna hmun ani. 
+    Zirtirtu thiam tak 15+ kan nei a, naupang 200+ kan enkawl mek ani.</p>
   </div>
-</section>
-
-<section id="contact">
-  <h2 class="title">Get In Touch</h2>
-  <div class="card" style="max-width:600px;margin:0 auto;text-align:center">
-    <p>📍 Saikhawthlir, Tripura</p><p>📞 +91 98765 43210</p>
-  </div>
-</section>
+</div>
 
 <footer>
-  <p>© 2026 Saikhawthlir High School. Designed with ❤️</p>
-  <p style="margin-top:10px;font-size:12px"><a href="index-old.html" style="color:var(--accent)">Old Version</a></p>
+  <p>© 2026 Saikhawthlir Sec School (RMSA). All Rights Reserved.</p>
 </footer>
 
 </body>
