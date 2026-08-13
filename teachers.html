@@ -1,8 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher List - Saikhawthlir Sec School</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+  :root{--primary:#0A2647;--accent:#F5C542;--light:#F8FAFC}
+  body{background:var(--light)}
+  
+  /* NAVBAR - I neih tawh kha */
+  header{background:var(--primary);color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.2)}
+  nav{max-width:1200px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-size:20px;font-weight:700}
+  .logo span{color:var(--accent);font-size:14px;display:block}
+  .nav-links{display:flex;gap:25px}
+  .nav-links a{color:white;text-decoration:none;font-weight:600;transition:0.3s;padding:8px 0}
+  .nav-links a:hover{color:var(--accent);border-bottom:2px solid var(--accent)}
+  .hamburger{display:none;font-size:28px;cursor:pointer}
+  .mobile-menu{display:none}
+  
+  .container{max-width:1200px;margin:0 auto;padding:60px 20px}
+  .title{text-align:center;font-size:36px;color:var(--primary);margin-bottom:50px;font-weight:700}
+  
+  /* TEACHER CARDS GRID */
+  .teacher-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:35px}
+  
+  /* TEACHER CARD */
+  .teacher-card{background:white;border-radius:20px;box-shadow:0 8px 25px rgba(0,0,0,0.1);overflow:hidden;transition:0.3s;text-align:center}
+  .teacher-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(0,0,0,0.15)}
+  
+  /* PIC LIAN PUI */
+  .teacher-img{width:100%;height:280px;object-fit:cover;border-bottom:4px solid var(--accent)}
+  
+  .teacher-info{padding:25px 20px}
+  .teacher-name{font-size:22px;color:var(--primary);font-weight:700;margin-bottom:5px}
+  .teacher-subject{background:var(--accent);color:var(--primary);display:inline-block;padding:6px 15px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:15px}
+  
+  .teacher-detail{display:flex;align-items:center;justify-content:center;gap:10px;margin:10px 0;font-size:14px;color:#555}
+  .teacher-detail svg{width:18px;height:18px;fill:var(--primary);flex-shrink:0}
+  
+  footer{background:var(--primary);color:white;text-align:center;padding:30px;margin-top:60px}
+  
+  /* MOBILE */
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .hamburger{display:block}
+    .mobile-menu{display:none;flex-direction:column;background:var(--primary);padding:15px;gap:12px}
+    .mobile-menu.active{display:flex}
+    .title{font-size:28px}
+    .teacher-img{height:240px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Saikhawthlir Sec School <span>RMSA</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="download.html">Download</a>
+      <a href="teachers.html">Teacher List</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="hamburger" onclick="document.getElementById('mMenu').classList.toggle('active')">☰</div>
+  </nav>
+  <div class="mobile-menu" id="mMenu">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="download.html">Download</a>
+    <a href="teachers.html">Teacher List</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+</header>
+
 <div class="container">
-  <div class="card">
-    <h2>Teacher List</h2>
-    <p>1. Pu __________ - Headmaster</p>
-    <p>2. Pi __________ - Science Teacher</p>
-    <p>3. Pu __________ - Maths Teacher</p>
+  <h1 class="title">Our Dedicated Teachers</h1>
+  
+  <div class="teacher-grid">
+    
+    <!-- TEACHER 1 -->
+    <div class="teacher-card">
+      <img src="images/teacher1.jpg" alt="Teacher" class="teacher-img">
+      <div class="teacher-info">
+        <h3 class="teacher-name">Pu Lalnunpuia</h3>
+        <p class="teacher-subject">Maths Teacher</p>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          lalmaths@gmail.com
+        </div>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Saikhawthlir, Tripura
+        </div>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91 94361 23456
+        </div>
+      </div>
+    </div>
+    
+    <!-- TEACHER 2 -->
+    <div class="teacher-card">
+      <img src="images/teacher2.jpg" alt="Teacher" class="teacher-img">
+      <div class="teacher-info">
+        <h3 class="teacher-name">Pi Lalruati</h3>
+        <p class="teacher-subject">Science Teacher</p>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          ruati.science@gmail.com
+        </div>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Saikhawthlir, Tripura
+        </div>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91 98625 78901
+        </div>
+      </div>
+    </div>
+    
+    <!-- TEACHER 3 COPY BELH CHAWN THEIH -->
+    <div class="teacher-card">
+      <img src="images/teacher3.jpg" alt="Teacher" class="teacher-img">
+      <div class="teacher-info">
+        <h3 class="teacher-name">Pu Zoremsanga</h3>
+        <p class="teacher-subject">English Teacher</p>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          zorem.eng@gmail.com
+        </div>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Saikhawthlir, Tripura
+        </div>
+        
+        <div class="teacher-detail">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          +91 70052 34567
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
+
+<footer>
+  <p>© 2026 Saikhawthlir Sec School (RMSA). All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
