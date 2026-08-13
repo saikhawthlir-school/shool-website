@@ -3,42 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saikhawthlir Sec School (RMSA)</title>
+<title>Home - Saikhawthlir Sec School</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-  :root{--primary:#0A2647;--accent:#F5C542;--light:#F8FAFC}
-  body{background:var(--light)}
-  
-  /* NAVBAR HORIZONTAL */
-  header{background:var(--primary);color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.2)}
-  nav{max-width:1200px;margin:0 auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-  .logo{font-size:20px;font-weight:700}
-  .logo span{color:var(--accent);font-size:14px;display:block}
-  .nav-links{display:flex;gap:25px}
-  .nav-links a{color:white;text-decoration:none;font-weight:600;transition:0.3s;padding:8px 0}
-  .nav-links a:hover{color:var(--accent);border-bottom:2px solid var(--accent)}
-  .hamburger{display:none;font-size:28px;cursor:pointer}
-  .mobile-menu{display:none}
-  
-  .container{max-width:1200px;margin:0 auto;padding:60px 20px}
-  .hero{text-align:center;margin-bottom:50px}
+  /* INDEX PAGE CHAUH A TAN CSS */
+  .hero{text-align:center;margin-bottom:50px;padding:40px 0}
   .hero h1{font-size:40px;color:var(--primary);margin-bottom:10px}
   .hero p{color:#555;font-size:18px}
-  
-  .card{background:white;padding:30px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);margin-bottom:30px}
-  .card h2{color:var(--primary);margin-bottom:15px;border-left:4px solid var(--accent);padding-left:12px}
-  
-  footer{background:var(--primary);color:white;text-align:center;padding:30px;margin-top:50px}
-  
-  /* MOBILE */
-  @media(max-width:900px){
-    .nav-links{display:none}
-    .hamburger{display:block}
-    .mobile-menu{display:none;flex-direction:column;background:var(--primary);padding:15px;gap:12px}
-    .mobile-menu.active{display:flex}
-    .hero h1{font-size:28px}
-  }
+  .card h2{color:var(--primary);margin-bottom:15px;border-left:4px solid var(--accent);padding-left:12px;font-size:24px}
+  .card p{line-height:1.8;color:#444}
 </style>
 </head>
 <body>
@@ -46,21 +20,28 @@
 <header>
   <nav>
     <div class="logo">Saikhawthlir Sec School <span>RMSA</span></div>
+    
+    <!-- PC MENU -->
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="download.html">Download</a>
       <a href="teachers.html">Teacher List</a>
       <a href="contact.html">Contact Us</a>
     </div>
-    <div class="hamburger" onclick="document.getElementById('mMenu').classList.toggle('active')">☰</div>
+    
+    <!-- MOBILE HAMBURGER -->
+    <button class="hamburger" onclick="openMenu()">☰</button>
   </nav>
-  <div class="mobile-menu" id="mMenu">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="download.html">Download</a>
-    <a href="teachers.html">Teacher List</a>
-    <a href="contact.html">Contact Us</a>
+  
+  <!-- MOBILE MENU FULL SCREEN -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+    <a href="download.html" onclick="closeMenu()">Download</a>
+    <a href="teachers.html" onclick="closeMenu()">Teacher List</a>
+    <a href="contact.html" onclick="closeMenu()">Contact Us</a>
   </div>
 </header>
 
@@ -73,7 +54,7 @@
   <div class="card">
     <h2>Headmaster's Message</h2>
     <p><b>Pu __________</b></p>
-    <p style="margin-top:15px;line-height:1.8">
+    <p style="margin-top:15px">
       Kan School ah hian naupang te hmakhaw ngaiin zirna tha ber kan pe a, 
       nun tha leh character tha kan enkawl bawk ani. RMSA hnuaiah hian 
       hmasawnna tam tak kan nei tawh a, in thawhpui na kan ngai hlu hle.
@@ -81,17 +62,21 @@
       Kan website ah hian hriat tur pawimawh te kan dah thin. Min lo tlawh zing rawh u.
     </p>
   </div>
-
-  <div class="card">
-    <h2>About Our School</h2>
-    <p>Saikhawthlir Sec School hi RMSA hnuaia awm, class 9 atanga 10 thleng zirna hmun ani. 
-    Zirtirtu thiam tak 15+ kan nei a, naupang 200+ kan enkawl mek ani.</p>
-  </div>
 </div>
 
 <footer>
   <p>© 2026 Saikhawthlir Sec School (RMSA). All Rights Reserved.</p>
 </footer>
 
+<script>
+  function openMenu(){
+    document.getElementById('mobileMenu').classList.add('active');
+    document.body.style.overflow = 'hidden'; // Scroll lock
+  }
+  function closeMenu(){
+    document.getElementById('mobileMenu').classList.remove('active');
+    document.body.style.overflow = 'auto'; // Scroll on
+  }
+</script>
 </body>
 </html>
