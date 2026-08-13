@@ -95,15 +95,20 @@ footer{background:var(--primary);color:white;text-align:center;padding:30px;marg
   .nav-links{display:none}
   .hamburger{display:block}
   nav{
-    flex-direction:row-reverse; /* ☰ VEILAM NAN */
+    flex-direction:row-reverse;
     justify-content:space-between;
+    gap:10px; /* HEI HI BELH - ☰ LEH LOGO INKAR TIH HNAIH NAN */
+    padding:15px 15px; /* 20px atangin 15px ah - sir 2 tih hniam */
   }
   .logo{
-    order:1; /* LOGO DINGLAM NAN */
-    font-size:16px; /* A sei deuh avangin tih te hret */
+    order:1;
+    font-size:16px;
+    flex:1; /* SPACE LA VEK TUR */
   }
   .hamburger{
-    order:2; /* ☰ VEILAM NAN */
+    order:2;
+    padding:0; /* BUTTON PADDING THLAK */
+    margin-right:5px; /* LOGO LAM PAWN TLEM HNIMHNAN */
   }
   .container{padding:30px 15px}
 
