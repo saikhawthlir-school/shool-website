@@ -31,13 +31,13 @@
       <a href="contact.html">Contact Us</a>
     </div>
     
-    <!-- MOBILE HAMBURGER -->
-    <button class="hamburger" onclick="openMenu()">☰</button>
+    <!-- MOBILE HAMBURGER + CLOSE HMUN 1 -->
+    <button class="hamburger" id="hamburgerBtn" onclick="openMenu()">☰</button>
+    <button class="close-btn" id="closeBtn" onclick="closeMenu()">×</button>
   </nav>
   
   <!-- MOBILE MENU - HEADER HNUAI AH CHIAH -->
   <div class="mobile-menu" id="mobileMenu">
-    <button class="close-btn" onclick="closeMenu()">×</button>
     <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="gallery.html" onclick="closeMenu()">Gallery</a>
     <a href="download.html" onclick="closeMenu()">Download</a>
@@ -78,9 +78,13 @@
 <script>
   function openMenu(){
     document.getElementById('mobileMenu').classList.add('active');
+    document.getElementById('hamburgerBtn').style.display = 'none'; // ☰ hide
+    document.getElementById('closeBtn').style.display = 'block'; // X show
   }
   function closeMenu(){
     document.getElementById('mobileMenu').classList.remove('active');
+    document.getElementById('hamburgerBtn').style.display = 'block'; // ☰ show
+    document.getElementById('closeBtn').style.display = 'none'; // X hide
   }
   // Pawn lam hmet pawn a in close thei
   document.addEventListener('click', function(e){
