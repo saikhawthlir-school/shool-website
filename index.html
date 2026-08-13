@@ -81,11 +81,13 @@
     document.getElementById('mobileMenu').classList.add('active');
     document.getElementById('hamburgerBtn').style.display = 'none';
     document.getElementById('closeBtn').style.display = 'block';
+    document.querySelector('header').classList.add('menu-open'); // SCHOOL HMING THUP NAN
   }
   function closeMenu(){
     document.getElementById('mobileMenu').classList.remove('active');
     document.getElementById('hamburgerBtn').style.display = 'block';
     document.getElementById('closeBtn').style.display = 'none';
+    document.querySelector('header').classList.remove('menu-open'); // SCHOOL HMING RAWN LAN LEH NAN
   }
   document.addEventListener('click', function(e){
     if(!e.target.closest('header')){
