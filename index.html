@@ -20,7 +20,8 @@
 
 <header>
   <nav>
-    <div class="logo">Saikhawthlir Sec School <span>RMSA</span></div>
+    <!-- PC + MOBILE BOTH - IN ZAWN VEK -->
+    <div class="logo">Saikhawthlir Sec School (RMSA)</div>
     
     <!-- PC MENU -->
     <div class="nav-links">
@@ -31,12 +32,12 @@
       <a href="contact.html">Contact Us</a>
     </div>
     
-    <!-- MOBILE HAMBURGER + CLOSE HMUN 1 -->
+    <!-- MOBILE HAMBURGER + CLOSE -->
     <button class="hamburger" id="hamburgerBtn" onclick="openMenu()">☰</button>
     <button class="close-btn" id="closeBtn" onclick="closeMenu()">×</button>
   </nav>
   
-  <!-- MOBILE MENU - HEADER HNUAI AH CHIAH -->
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html" onclick="closeMenu()">Home</a>
     <a href="gallery.html" onclick="closeMenu()">Gallery</a>
@@ -78,15 +79,14 @@
 <script>
   function openMenu(){
     document.getElementById('mobileMenu').classList.add('active');
-    document.getElementById('hamburgerBtn').style.display = 'none'; // ☰ hide
-    document.getElementById('closeBtn').style.display = 'block'; // X show
+    document.getElementById('hamburgerBtn').style.display = 'none';
+    document.getElementById('closeBtn').style.display = 'block';
   }
   function closeMenu(){
     document.getElementById('mobileMenu').classList.remove('active');
-    document.getElementById('hamburgerBtn').style.display = 'block'; // ☰ show
-    document.getElementById('closeBtn').style.display = 'none'; // X hide
+    document.getElementById('hamburgerBtn').style.display = 'block';
+    document.getElementById('closeBtn').style.display = 'none';
   }
-  // Pawn lam hmet pawn a in close thei
   document.addEventListener('click', function(e){
     if(!e.target.closest('header')){
       closeMenu();
