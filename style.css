@@ -1,9 +1,9 @@
-/* style.css - Saikhawthlir Sec School FINAL */
+/* style.css - Saikhawthlir Sec School v5 */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 :root{--primary:#0A2647;--accent:#F5C542;--light:#F8FAFC}
 body{background:var(--light);color:#333}
 
-/* NAVBAR HORIZONTAL */
+/* NAVBAR */
 header{background:var(--primary);color:white;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,0.2)}
 nav{
   max-width:1200px;
@@ -13,7 +13,8 @@ nav{
   justify-content:space-between;
   align-items:center;
   height:70px;
-  flex-direction:row-reverse; /* ☰ RIN PATHUM VEILAM AH */
+  flex-direction:row-reverse; /* ☰ VEILAM */
+  position:relative; /* X dahna tur */
 }
 .logo{font-size:20px;font-weight:700;text-align:left}
 .logo span{color:var(--accent);font-size:14px;display:block}
@@ -21,66 +22,58 @@ nav{
 .nav-links a{color:white;text-decoration:none;font-weight:600;transition:0.3s;padding:8px 0}
 .nav-links a:hover{color:var(--accent);border-bottom:2px solid var(--accent)}
 .nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
-.hamburger{display:none;font-size:28px;cursor:pointer;color:white;background:none;border:none}
 
-/* MOBILE MENU - HEADER HNUAI CHIAH, A TETE */
+/* HAMBURGER + CLOSE BUTTON HMUN 1 AH */
+.hamburger, .close-btn{
+  font-size:28px;
+  cursor:pointer;
+  color:white;
+  background:none;
+  border:none;
+  padding:5px;
+  z-index:1001;
+}
+.hamburger{display:none}
+.close-btn{display:none;position:absolute;left:20px;top:18px} /* ☰ AWMNA BIAK */
+
+/* MOBILE MENU */
 .mobile-menu{
   display:none;
   position:absolute;
   top:70px;
   left:0;
-  width:80%; /* PAGE ZAWNG2 AWH LO */
+  width:80%;
   max-width:320px;
   background:var(--primary);
   flex-direction:column;
-  align-items:flex-start; /* VEILAM AH TEXT A KAL */
-  padding:30px 25px;
-  gap:8px; /* INKAR HNAI */
+  align-items:flex-start;
+  padding:25px 25px 30px 25px; /* Chung lam tih hniam */
+  gap:4px; /* INKAR TIH ZIM LEH - 8px atangin 4px */
   z-index:999;
   box-shadow:0 10px 20px rgba(0,0,0,0.3);
   animation:slideDown 0.3s ease;
   border-radius:0 0 15px 0;
 }
 .mobile-menu.active{display:flex}
-
-@keyframes slideDown{
-  from{opacity:0;transform:translateY(-10px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)}}
 .mobile-menu a{
   color:white;
   text-decoration:none;
   font-size:20px;
   font-weight:600;
   transition:0.3s;
-  padding:10px 15px;
+  padding:8px 15px; /* 10px atangin 8px ah */
   width:100%;
-  text-align:left; /* VEILAM AH */
+  text-align:left;
   border-radius:8px;
 }
 .mobile-menu a:hover{color:var(--accent);background:rgba(245,197,66,0.1)}
 
-/* X CLOSE BUTTON */
-.close-btn{
-  position:absolute;
-  top:12px;
-  right:15px;
-  font-size:32px;
-  color:white;
-  background:none;
-  border:none;
-  cursor:pointer;
-  transition:0.3s;
-}
-.close-btn:hover{color:var(--accent);transform:rotate(90deg)}
-
 .container{max-width:1200px;margin:0 auto;padding:60px 20px}
 .title{text-align:center;font-size:36px;color:var(--primary);margin-bottom:50px;font-weight:700}
-
 footer{background:var(--primary);color:white;text-align:center;padding:30px;margin-top:60px}
 
-/* CARD MAWI - A SIR LINE AWM LO */
+/* CARD */
 .card{
   background:white;
   padding:35px;
