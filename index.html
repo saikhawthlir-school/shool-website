@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home - Saikhawthlir Sec School</title>
+<title>Home - Saikhawthlir Sec School (RMSA)</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -12,7 +12,8 @@
   .hero h1{font-size:40px;color:var(--primary);margin-bottom:10px}
   .hero p{color:#555;font-size:18px}
   .card h2{color:var(--primary);margin-bottom:15px;border-left:4px solid var(--accent);padding-left:12px;font-size:24px}
-  .card p{line-height:1.8;color:#444}
+  .card p{line-height:1.8;color:#444;margin-top:10px}
+  .card b{color:var(--primary)}
 </style>
 </head>
 <body>
@@ -34,7 +35,7 @@
     <button class="hamburger" onclick="openMenu()">☰</button>
   </nav>
   
-  <!-- MOBILE MENU FULL SCREEN -->
+  <!-- MOBILE MENU - HEADER HNUAI AH CHIAH -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="close-btn" onclick="closeMenu()">×</button>
     <a href="index.html" onclick="closeMenu()">Home</a>
@@ -54,13 +55,19 @@
   <div class="card">
     <h2>Headmaster's Message</h2>
     <p><b>Pu __________</b></p>
-    <p style="margin-top:15px">
+    <p>
       Kan School ah hian naupang te hmakhaw ngaiin zirna tha ber kan pe a, 
       nun tha leh character tha kan enkawl bawk ani. RMSA hnuaiah hian 
       hmasawnna tam tak kan nei tawh a, in thawhpui na kan ngai hlu hle.
       <br><br>
       Kan website ah hian hriat tur pawimawh te kan dah thin. Min lo tlawh zing rawh u.
     </p>
+  </div>
+
+  <div class="card">
+    <h2>About Our School</h2>
+    <p>Saikhawthlir Sec School hi RMSA hnuaia awm, class 9 atanga 10 thleng zirna hmun ani. 
+    Zirtirtu thiam tak 15+ kan nei a, naupang 200+ kan enkawl mek ani.</p>
   </div>
 </div>
 
@@ -71,12 +78,17 @@
 <script>
   function openMenu(){
     document.getElementById('mobileMenu').classList.add('active');
-    document.body.style.overflow = 'hidden'; // Scroll lock
   }
   function closeMenu(){
     document.getElementById('mobileMenu').classList.remove('active');
-    document.body.style.overflow = 'auto'; // Scroll on
   }
+  // Pawn lam hmet pawn a in close thei
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('header')){
+      closeMenu();
+    }
+  })
 </script>
+
 </body>
 </html>
