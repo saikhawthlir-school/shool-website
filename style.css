@@ -97,18 +97,33 @@ footer{background:var(--primary);color:white;text-align:center;padding:30px;marg
   nav{
     flex-direction:row-reverse;
     justify-content:space-between;
-    gap:10px; /* HEI HI BELH - ☰ LEH LOGO INKAR TIH HNAIH NAN */
-    padding:15px 15px; /* 20px atangin 15px ah - sir 2 tih hniam */
+    gap:10px;
+    padding:15px 15px;
   }
   .logo{
     order:1;
     font-size:16px;
-    flex:1; /* SPACE LA VEK TUR */
+    flex:1;
   }
   .hamburger{
     order:2;
-    padding:0; /* BUTTON PADDING THLAK */
-    margin-right:5px; /* LOGO LAM PAWN TLEM HNIMHNAN */
+    padding:0;
+    margin-right:5px;
   }
   .container{padding:30px 15px}
+
+  /* MENU OPEN LAI A SCHOOL HMING THUP NAN */
+  .menu-open .logo{display:none}
+  .menu-open .close-btn{position:static} /* X A VEILAM BIAK NAN */
+}
+
+/* MOBILE MENU - INKAR TIH ZIM */
+.mobile-menu{
+  gap:2px; /* 4px atangin 2px ah - INKAR ZIM LEH */
+  padding:20px 25px 30px 25px; /* CHUNG LAM TIH HNIAM LEH */
+}
+.mobile-menu a{
+  padding:6px 15px; /* 8px atangin 6px ah */
+  font-size:19px; /* 20px atangin 19px ah */
+}
 
