@@ -1,4 +1,4 @@
-/* style.css - Saikhawthlir Sec School v5 */
+/* style.css - Saikhawthlir Sec School FINAL */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 :root{--primary:#0A2647;--accent:#F5C542;--light:#F8FAFC}
 body{background:var(--light);color:#333}
@@ -13,8 +13,8 @@ nav{
   justify-content:space-between;
   align-items:center;
   height:70px;
-  flex-direction:row-reverse; /* ☰ VEILAM */
-  position:relative; /* X dahna tur */
+  flex-direction:row-reverse; /* ☰ VEILAM AH AWM NAN */
+  position:relative; /* X DAHNA TUR */
 }
 .logo{font-size:20px;font-weight:700;text-align:left}
 .logo span{color:var(--accent);font-size:14px;display:block}
@@ -36,33 +36,38 @@ nav{
 .hamburger{display:none}
 .close-btn{display:none;position:absolute;left:20px;top:18px} /* ☰ AWMNA BIAK */
 
-/* MOBILE MENU */
+/* MOBILE MENU - HEADER HNUAI CHIAH + A TETE */
 .mobile-menu{
   display:none;
   position:absolute;
   top:70px;
   left:0;
-  width:80%;
+  width:80%; /* PAGE ZAWNG2 AWH LO */
   max-width:320px;
   background:var(--primary);
   flex-direction:column;
-  align-items:flex-start;
-  padding:25px 25px 30px 25px; /* Chung lam tih hniam */
-  gap:4px; /* INKAR TIH ZIM LEH - 8px atangin 4px */
+  align-items:flex-start; /* VEILAM AH TEXT */
+  padding:25px 25px 30px 25px;
+  gap:4px; /* INKAR ZIM */
   z-index:999;
   box-shadow:0 10px 20px rgba(0,0,0,0.3);
   animation:slideDown 0.3s ease;
   border-radius:0 0 15px 0;
 }
 .mobile-menu.active{display:flex}
-@keyframes slideDown{from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)}}
+
+@keyframes slideDown{
+  from{opacity:0;transform:translateY(-10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
 .mobile-menu a{
   color:white;
   text-decoration:none;
   font-size:20px;
   font-weight:600;
   transition:0.3s;
-  padding:8px 15px; /* 10px atangin 8px ah */
+  padding:8px 15px; /* INKAR ZIM */
   width:100%;
   text-align:left;
   border-radius:8px;
@@ -71,6 +76,7 @@ nav{
 
 .container{max-width:1200px;margin:0 auto;padding:60px 20px}
 .title{text-align:center;font-size:36px;color:var(--primary);margin-bottom:50px;font-weight:700}
+
 footer{background:var(--primary);color:white;text-align:center;padding:30px;margin-top:60px}
 
 /* CARD */
