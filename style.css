@@ -1,4 +1,4 @@
-/* style.css - Saikhawthlir Sec School FINAL v6 */
+/* style.css - Saikhawthlir Sec School FINAL v7 */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 :root{--primary:#0A2647;--accent:#F5C542;--light:#F8FAFC}
 body{background:var(--light);color:#333}
@@ -32,29 +32,19 @@ nav{
 .nav-links a:hover{color:var(--accent);border-bottom:2px solid var(--accent)}
 .nav-links a.active{color:var(--accent);border-bottom:2px solid var(--accent)}
 
-/* HAMBURGER + CLOSE BUTTON */
+/* HAMBURGER + CLOSE BUTTON - HMUN 1 AH */
 .hamburger, .close-btn{
-  font-size:28px;
-  cursor:pointer;
-  color:white;
-  background:none;
-  border:none;
-  padding:5px;
-  z-index:1001;
-}
-.hamburger{display:none}
-.close-btn{
-  display:none;
-  position:static; /* ABSOLUTE PAIH - HMUN 1 AH AWM TIR NAN */
-  order:2; /* ☰ AWMNA BIAK */
-  font-size:28px;
+  font-size:32px; /* X TIH LIAN */
   cursor:pointer;
   color:white;
   background:none;
   border:none;
   padding:0;
-  margin-right:5px; /* INKAR HNIMHNAN */
+  z-index:1001;
+  order:2; /* VEILAM AH AWM NAN - row-reverse AH CHUAN 2 HI VEILAM */
 }
+.hamburger{display:none}
+.close-btn{display:none} /* POSITION PAIH VEK */
 
 /* MOBILE MENU */
 .mobile-menu{
@@ -67,8 +57,8 @@ nav{
   background:var(--primary);
   flex-direction:column;
   align-items:flex-start;
-  padding:25px 25px 30px 25px;
-  gap:4px;
+  padding:20px 25px 30px 25px; /* CHUNG LAM TIH HNIAM */
+  gap:2px; /* INKAR TIH ZIM */
   z-index:999;
   box-shadow:0 10px 20px rgba(0,0,0,0.3);
   animation:slideDown 0.3s ease;
@@ -79,10 +69,10 @@ nav{
 .mobile-menu a{
   color:white;
   text-decoration:none;
-  font-size:20px;
+  font-size:19px; /* TIH HNIAM HRET */
   font-weight:600;
   transition:0.3s;
-  padding:8px 15px;
+  padding:6px 15px; /* INKAR TIH ZIM */
   width:100%;
   text-align:left;
   border-radius:8px;
@@ -106,18 +96,18 @@ footer{background:var(--primary);color:white;text-align:center;padding:30px;marg
   .nav-links{display:none}
   .hamburger{display:block}
   nav{
-    flex-direction:row-reverse;
+    flex-direction:row-reverse; /* ☰ VEILAM NAN */
     justify-content:space-between;
     gap:10px;
     padding:15px 15px;
   }
   .logo{
-    order:1;
+    order:1; /* LOGO DINGLAM NAN */
     font-size:16px;
     flex:1;
   }
   .hamburger{
-    order:2;
+    order:2; /* ☰ VEILAM NAN */
     padding:0;
     margin-right:5px;
   }
@@ -125,16 +115,3 @@ footer{background:var(--primary);color:white;text-align:center;padding:30px;marg
 
   /* MENU OPEN LAI A SCHOOL HMING THUP NAN */
   .menu-open .logo{display:none}
-  .menu-open .close-btn{position:static} /* X A VEILAM BIAK NAN */
-}
-
-/* MOBILE MENU - INKAR TIH ZIM */
-.mobile-menu{
-  gap:2px; /* 4px atangin 2px ah - INKAR ZIM LEH */
-  padding:20px 25px 30px 25px; /* CHUNG LAM TIH HNIAM LEH */
-}
-.mobile-menu a{
-  padding:6px 15px; /* 8px atangin 6px ah */
-  font-size:19px; /* 20px atangin 19px ah */
-}
-
